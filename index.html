@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Er. Shripad Khaparde — Civil Engineering Software &amp; Consulting</title>
+<meta name="description" content="Er. Shripad Khaparde — 32+ years in Estimation, Tendering, Planning & Budgeting. Builder of Civil RA, CLCMS, and other site-tested engineering management tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE8DB;
+    --paper-2:#F5F1E6;
+    --ink:#1B2430;
+    --ink-soft:#4B5561;
+    --blueprint:#2C5B7C;
+    --rust:#B1502B;
+    --rule:#B7AE9C;
+    --rule-faint:#D9D2C0;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.5;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:'Roboto Slab', serif; font-weight:700; margin:0;}
+  a{color:inherit;}
+
+  header.nav{ position:sticky; top:0; z-index:50; background:var(--white); border-bottom:1px solid var(--rule-faint); }
+  .nav-inner{ max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .nav-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:18px;}
+  .nav-brand .accent{color:var(--rust);}
+  .nav-links{display:flex; gap:26px; font-size:13px; color:var(--ink-soft);}
+  .nav-links a{text-decoration:none;}
+  .nav-links a:hover{color:var(--rust);}
+  @media (max-width:700px){ .nav-links{display:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--paper); padding:72px 0 60px;}
+  .hero .kicker{font-size:12px; letter-spacing:0.06em; color:var(--rust); font-weight:700; margin-bottom:14px;}
+  .hero h1{font-size:38px; line-height:1.25; max-width:20ch; margin-bottom:16px;}
+  .hero p.lead{font-size:16px; color:var(--ink-soft); max-width:60ch; margin-bottom:8px; line-height:1.6;}
+  .cred-row{display:flex; gap:22px; flex-wrap:wrap; margin-top:24px;}
+  .cred{font-size:12.5px; color:var(--ink-soft); border-left:2px solid var(--blueprint); padding-left:10px;}
+  .cred b{display:block; color:var(--ink); font-size:14px; font-family:'Roboto Slab',serif;}
+  .hero-links{margin-top:26px; display:flex; gap:16px; flex-wrap:wrap; font-size:13px;}
+  .hero-links a{text-decoration:none; color:var(--blueprint);}
+  .hero-links a:hover{color:var(--rust);}
+
+  /* ---------- Sections ---------- */
+  section{padding:64px 0;}
+  .section-tag{font-size:11.5px; letter-spacing:0.06em; color:var(--rust); font-weight:700; margin-bottom:8px;}
+  .section-head{max-width:70ch; margin-bottom:36px;}
+  .section-head h2{font-size:27px; margin-bottom:10px;}
+  .section-head p{font-size:14.5px; color:var(--ink-soft); line-height:1.6;}
+  .alt{background:var(--paper-2);}
+
+  /* ---------- Story ---------- */
+  .story p{font-size:15px; color:var(--ink-soft); max-width:66ch; line-height:1.65; margin:0 0 16px;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:220px 1fr; gap:44px; align-items:start;}
+  .about-photo img{
+    width:100%; height:auto; display:block;
+    border:1px solid var(--rule); filter:grayscale(15%);
+  }
+  .about-text p{font-size:14.5px; color:var(--ink-soft); line-height:1.65; max-width:68ch; margin:0 0 16px;}
+  @media (max-width:700px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:220px;}
+  }
+
+  /* ---------- Products ---------- */
+  .product-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  .product-card{
+    background:var(--white); border:1px solid var(--rule); padding:28px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .product-card .ptag{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.04em;
+    color:#fff; background:var(--rust); padding:5px 10px; align-self:flex-start;
+  }
+  .product-card.coming .ptag{background:var(--blueprint);}
+  .product-card h3{font-size:20px;}
+  .product-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0; flex-grow:1;}
+  .product-card .plink{
+    font-size:13px; font-weight:700; color:var(--rust); text-decoration:none;
+    border-top:1px solid var(--rule-faint); padding-top:14px; margin-top:6px;
+  }
+  .product-card.coming .plink{color:var(--ink-soft);}
+  .product-card .plink:hover{opacity:0.8;}
+
+  /* ---------- Principles / approach ---------- */
+  .principles{display:grid; grid-template-columns:1fr 1fr; gap:24px 40px;}
+  .principles .p{border-top:2px solid var(--blueprint); padding-top:12px;}
+  .principles .p h3{font-size:15.5px; margin-bottom:6px;}
+  .principles .p p{font-size:13px; color:var(--ink-soft); line-height:1.55; margin:0;}
+
+  /* ---------- Contact / footer ---------- */
+  footer{background:var(--ink); color:#E7E3D8; padding:48px 0 30px;}
+  footer .foot-inner{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px;}
+  footer h3{color:#fff; font-size:18px; margin-bottom:10px;}
+  footer p, footer a{font-size:13px; color:#B9C0C8; line-height:1.7; text-decoration:none;}
+  footer a:hover{color:#fff;}
+  .foot-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:19px; color:#fff;}
+  .foot-brand .accent{color:var(--rust);}
+  .copyline{text-align:center; font-size:11.5px; color:#7C8590; margin-top:36px;}
+
+  @media (max-width:760px){
+    .hero h1{font-size:29px;}
+    .product-grid{grid-template-columns:1fr;}
+    .principles{grid-template-columns:1fr;}
+    footer .foot-inner{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">Er. Shripad <span class="accent">Khaparde</span></div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#apps">Apps</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker">CIVIL ENGINEERING SOFTWARE &amp; CONSULTING</div>
+      <h1>Software built from 32 years on real projects, not a syllabus.</h1>
+      <p class="lead">I'm Shripad Khaparde — B.E. (Civil), MBA — 32+ years in Estimation, Tendering, Planning &amp; Budgeting across India and Oman. Everything here started as a tool I built for my own work, then refined for other engineers facing the same problems.</p>
+      <div class="cred-row">
+        <div class="cred"><b>32+ Years</b>Estimation, Tendering, Planning &amp; Budgeting</div>
+        <div class="cred"><b>India &amp; Oman</b>Site and head-office experience</div>
+        <div class="cred"><b>B.E. (Civil), MBA</b>Executive Programme: Urban Utilities, Sanitation &amp; Drainage — IIT Kharagpur</div>
+      </div>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/shripad-khaparde115268/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a>
+        <a href="tel:+919960367890">+91 99603 67890</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="shripad-photo.png" alt="Er. Shripad Khaparde">
+      </div>
+      <div class="about-text">
+        <div class="section-tag">ABOUT</div>
+        <h2 style="font-size:26px; margin-bottom:16px;">Shripad Khaparde</h2>
+        <p>I'm a construction management professional with 30+ years of experience across India and Oman, currently functioning at General Manager level, independently handling project management for a construction company. My work spans estimation, tendering, rate analysis, project planning, budgeting, commercial and contract management, project controls, and profitability monitoring.</p>
+        <p>Over three decades, I've moved from hands-on site execution and client billing, into estimation and tendering, project planning, and commercial and contract management — work that has included infrastructure projects exceeding USD 400 million and 400+ km of road networks in Oman, and delivery of large-scale developments like Reliance Corporate Park Phase-1 in India.</p>
+        <p>Alongside project work, I build practical tools — Power BI dashboards, estimation systems, and construction MIS — because the reporting systems available rarely matched how estimation and project control actually get done on site. Civil RA, CLCMS, and the tools on this site come from that same instinct: build what the work actually needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPS ================= -->
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-tag">WHAT I'VE BUILT</div>
+      <div class="section-head">
+        <h2>Tools for how construction work actually runs</h2>
+        <p>Each one is built around a real problem I faced on site or at the estimation desk — not a generic template.</p>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <span class="ptag">AVAILABLE NOW</span>
+          <h3>Civil RA</h3>
+          <p>BOQ rate analysis software. Import a BOQ, build Labour-Material-Plant rate analysis per item, reuse rates across projects, and generate a tender-ready quoted rate — all in one file, on your own computer.</p>
+          <a class="plink" href="/civilra/">Visit Civil RA →</a>
+        </div>
+
+        <div class="product-card coming">
+          <span class="ptag">IN DEVELOPMENT</span>
+          <h3>CLCMS</h3>
+          <p>Closed Loop Construction Management System — built to bring the same site-tested discipline to full project and construction management that Civil RA brings to rate analysis. Still in development — details coming once it's ready.</p>
+          <a class="plink" href="#contact">Get notified →</a>
+        </div>
+
+        <div class="product-card coming">
+          <span class="ptag">PLANNED</span>
+          <h3>Project Management Suite</h3>
+          <p>Additional site and project management tools, built the same way as Civil RA — from real project experience first, software second.</p>
+          <a class="plink" href="#contact">Get notified →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPROACH ================= -->
+  <section class="alt" id="approach">
+    <div class="wrap">
+      <div class="section-tag">HOW I BUILD</div>
+      <div class="section-head">
+        <h2>The same principles, across every tool</h2>
+      </div>
+      <div class="principles">
+        <div class="p"><h3>Built from real project work</h3><p>Every tool starts as something I needed myself on an actual project, in India or Oman — not a feature list written in the abstract.</p></div>
+        <div class="p"><h3>Your data stays yours</h3><p>No cloud, no server, no subscription reading your project data. The tools run on your own computer.</p></div>
+        <div class="p"><h3>Your judgment stays yours</h3><p>Every suggestion or carried-forward figure is a starting point — you review and finalise every number yourself.</p></div>
+        <div class="p"><h3>Support that's actually reachable</h3><p>Questions or issues go straight to me — not a ticket queue. Reach out anytime by phone or email below.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER / CONTACT ================= -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="foot-inner">
+        <div>
+          <div class="foot-brand">Shripad <span class="accent">Khaparde</span></div>
+          <p style="margin-top:8px; max-width:36ch;">B.E. (Civil), MBA, IIT Kharagpur<br>32+ Years — Estimation, Tendering, Planning &amp; Budgeting — India &amp; Oman</p>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <p><a href="https://www.linkedin.com/in/shripad-khaparde115268/" target="_blank" rel="noopener">linkedin.com/in/shripad-khaparde115268</a></p>
+          <p>+91 99603 67890 &nbsp;·&nbsp; <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a></p>
+          <p style="margin-top:10px;">Interested in CLCMS or future tools? Email or call to be notified at launch.</p>
+        </div>
+      </div>
+      <div class="copyline">© <span id="year"></span> Shripad Khaparde. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
