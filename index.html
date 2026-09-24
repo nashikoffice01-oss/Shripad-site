@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Civil RA — Rate Analysis Software for Estimators</title>
-<meta name="description" content="Civil RA is a BOQ rate analysis tool for civil engineers and estimators — built from 32+ years of estimation, tendering and planning experience.">
+<title>Er. Shripad Khaparde — Civil Engineering Software &amp; Consulting</title>
+<meta name="description" content="Er. Shripad Khaparde — 32+ years in Estimation, Tendering, Planning & Budgeting. Builder of Civil RA, CLCMS, and other site-tested engineering management tools.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -32,165 +32,75 @@
   h1,h2,h3{font-family:'Roboto Slab', serif; font-weight:700; margin:0;}
   a{color:inherit;}
 
-  /* ---------- Nav ---------- */
-  header.nav{
-    position:sticky; top:0; z-index:50;
-    background:var(--white);
-    border-bottom:1px solid var(--rule-faint);
-  }
-  .nav-inner{
-    max-width:1080px; margin:0 auto; padding:14px 24px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .nav-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:20px;}
+  header.nav{ position:sticky; top:0; z-index:50; background:var(--white); border-bottom:1px solid var(--rule-faint); }
+  .nav-inner{ max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .nav-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:18px;}
   .nav-brand .accent{color:var(--rust);}
   .nav-links{display:flex; gap:26px; font-size:13px; color:var(--ink-soft);}
   .nav-links a{text-decoration:none;}
   .nav-links a:hover{color:var(--rust);}
-  .nav-cta{
-    background:var(--rust); color:#fff; text-decoration:none;
-    padding:9px 18px; font-size:13px; font-weight:600; font-family:'IBM Plex Mono',monospace;
-  }
-  .nav-toggle{display:none;}
+  @media (max-width:700px){ .nav-links{display:none;} }
 
   /* ---------- Hero ---------- */
-  .hero{background:var(--paper); padding:64px 0 56px;}
-  .badge{
-    display:inline-block; background:var(--rust); color:#fff;
-    font-family:'Roboto Slab',serif; font-weight:700; font-size:12.5px;
-    padding:7px 14px; margin-bottom:18px;
-  }
-  .hero h1{font-size:40px; line-height:1.2; max-width:16ch; margin-bottom:16px;}
-  .hero .accent{color:var(--rust);}
-  .hero p.lead{font-size:16px; color:var(--ink-soft); max-width:58ch; margin-bottom:10px;}
-  .byline{font-size:13.5px; color:var(--blueprint); margin-top:22px;}
-  .byline-creds{font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
-  .hero-ctas{margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;}
-  .btn{
-    display:inline-block; text-decoration:none; font-family:'Roboto Slab',serif;
-    font-weight:700; font-size:14.5px; padding:13px 24px;
-  }
-  .btn-primary{background:var(--rust); color:#fff;}
-  .btn-primary:hover{background:#96421F;}
-  .btn-ghost{background:transparent; color:var(--ink); border:1.5px solid var(--ink);}
-  .btn-ghost:hover{background:var(--ink); color:#fff;}
+  .hero{background:var(--paper); padding:72px 0 60px;}
+  .hero .kicker{font-size:12px; letter-spacing:0.06em; color:var(--rust); font-weight:700; margin-bottom:14px;}
+  .hero h1{font-size:38px; line-height:1.25; max-width:20ch; margin-bottom:16px;}
+  .hero p.lead{font-size:16px; color:var(--ink-soft); max-width:60ch; margin-bottom:8px; line-height:1.6;}
+  .cred-row{display:flex; gap:22px; flex-wrap:wrap; margin-top:24px;}
+  .cred{font-size:12.5px; color:var(--ink-soft); border-left:2px solid var(--blueprint); padding-left:10px;}
+  .cred b{display:block; color:var(--ink); font-size:14px; font-family:'Roboto Slab',serif;}
+  .hero-links{margin-top:26px; display:flex; gap:16px; flex-wrap:wrap; font-size:13px;}
+  .hero-links a{text-decoration:none; color:var(--blueprint);}
+  .hero-links a:hover{color:var(--rust);}
 
-  /* ---------- Section shells ---------- */
+  /* ---------- Sections ---------- */
   section{padding:64px 0;}
   .section-tag{font-size:11.5px; letter-spacing:0.06em; color:var(--rust); font-weight:700; margin-bottom:8px;}
   .section-head{max-width:70ch; margin-bottom:36px;}
-  .section-head h2{font-size:28px; margin-bottom:10px;}
+  .section-head h2{font-size:27px; margin-bottom:10px;}
   .section-head p{font-size:14.5px; color:var(--ink-soft); line-height:1.6;}
   .alt{background:var(--paper-2);}
 
-  /* ---------- Statement ---------- */
-  .statement p{font-size:16px; color:var(--ink-soft); max-width:66ch; line-height:1.6; margin:0 0 16px;}
-  .statement .strong{font-family:'Roboto Slab',serif; font-weight:700; color:var(--rust); font-size:17px; margin-top:6px;}
+  /* ---------- Story ---------- */
+  .story p{font-size:15px; color:var(--ink-soft); max-width:66ch; line-height:1.65; margin:0 0 16px;}
 
-  /* ---------- Specimen ---------- */
-  .specimen{
-    border:1px solid var(--ink); background:var(--paper-2);
-    padding:24px 28px; max-width:640px;
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:220px 1fr; gap:44px; align-items:start;}
+  .about-photo img{
+    width:100%; height:auto; display:block;
+    border:1px solid var(--rule); filter:grayscale(15%);
   }
-  .specimen .label{font-family:'Roboto Slab',serif; font-weight:500; font-size:13px; color:var(--ink-soft); margin-bottom:14px;}
-  .ledger-row{display:flex; align-items:baseline; font-size:13.5px; padding:5px 0;}
-  .ledger-row .k{white-space:nowrap; color:var(--ink-soft);}
-  .ledger-row .fill{flex:1; border-bottom:1px dotted var(--rule); margin:0 8px; transform:translateY(-3px);}
-  .ledger-row .v{white-space:nowrap; font-weight:600;}
-  .ledger-row.total{border-top:1px solid var(--rule); margin-top:6px; padding-top:10px;}
-  .ledger-row.total .v{color:var(--rust);}
+  .about-text p{font-size:14.5px; color:var(--ink-soft); line-height:1.65; max-width:68ch; margin:0 0 16px;}
+  @media (max-width:700px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:220px;}
+  }
 
-  /* ---------- Features ---------- */
-  .feature-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:0;}
-  .feature{
-    padding:20px 22px; border-bottom:1px solid var(--rule-faint);
-    display:flex; gap:14px; align-items:flex-start;
+  /* ---------- Products ---------- */
+  .product-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  .product-card{
+    background:var(--white); border:1px solid var(--rule); padding:28px;
+    display:flex; flex-direction:column; gap:14px;
   }
-  .feature:nth-child(odd){border-right:1px solid var(--rule-faint);}
-  .feature .num{
-    font-family:'Roboto Slab',serif; font-weight:700; color:var(--rust); font-size:14px;
-    width:26px; flex-shrink:0;
+  .product-card .ptag{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.04em;
+    color:#fff; background:var(--rust); padding:5px 10px; align-self:flex-start;
   }
-  .feature h3{font-size:15px; margin-bottom:5px;}
-  .feature p{font-size:13px; color:var(--ink-soft); margin:0; line-height:1.5;}
+  .product-card.coming .ptag{background:var(--blueprint);}
+  .product-card h3{font-size:20px;}
+  .product-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin:0; flex-grow:1;}
+  .product-card .plink{
+    font-size:13px; font-weight:700; color:var(--rust); text-decoration:none;
+    border-top:1px solid var(--rule-faint); padding-top:14px; margin-top:6px;
+  }
+  .product-card.coming .plink{color:var(--ink-soft);}
+  .product-card .plink:hover{opacity:0.8;}
 
-  /* ---------- Principles ---------- */
+  /* ---------- Principles / approach ---------- */
   .principles{display:grid; grid-template-columns:1fr 1fr; gap:24px 40px;}
   .principles .p{border-top:2px solid var(--blueprint); padding-top:12px;}
   .principles .p h3{font-size:15.5px; margin-bottom:6px;}
   .principles .p p{font-size:13px; color:var(--ink-soft); line-height:1.55; margin:0;}
-
-  /* ---------- Videos ---------- */
-  .video-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
-  .video-card{background:var(--white); border:1px solid var(--rule-faint);}
-  .video-frame{position:relative; padding-top:56.25%; background:var(--ink);}
-  .video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
-  .video-card .vcap{padding:14px 16px;}
-  .video-card h3{font-size:14.5px; margin-bottom:4px;}
-  .video-card p{font-size:12.5px; color:var(--ink-soft); margin:0;}
-  .video-note{font-size:12.5px; color:var(--ink-soft); margin-top:18px; font-style:italic;}
-
-  /* ---------- Pricing ---------- */
-  .pricing-box{
-    border:1px solid var(--ink); background:var(--white); padding:32px;
-    max-width:560px;
-  }
-  .price{font-family:'Roboto Slab',serif; font-size:30px; font-weight:700;}
-  .price small{display:block; font-size:12.5px; font-weight:400; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; margin-top:6px;}
-  .buy-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;}
-  .buy-btn{
-    display:inline-block; background:var(--rust); color:#fff; text-decoration:none;
-    font-family:'Roboto Slab',serif; font-weight:700; font-size:14.5px; padding:13px 22px;
-  }
-  .buy-btn small{display:block; font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:10.5px; opacity:0.85; margin-top:3px;}
-  .buy-btn.intl{background:var(--blueprint);}
-  .buy-btn:hover{opacity:0.9;}
-  .pricing-note{font-size:12.5px; color:var(--ink-soft); margin-top:20px; line-height:1.6; max-width:60ch;}
-
-  /* ---------- Pamphlet ---------- */
-  .pamphlet-card{
-    display:flex; align-items:center; gap:28px; flex-wrap:wrap;
-    border:1px solid var(--ink); background:var(--white); padding:28px 32px;
-    max-width:720px;
-  }
-  .pamphlet-card .picon{
-    width:56px; height:56px; flex-shrink:0; background:var(--rust); color:#fff;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Roboto Slab',serif; font-weight:700; font-size:13px; text-align:center;
-  }
-  .pamphlet-card h3{font-size:17px; margin-bottom:6px;}
-  .pamphlet-card p{font-size:13px; color:var(--ink-soft); margin:0 0 14px; max-width:46ch;}
-  .pamphlet-card .btn-primary{font-size:13.5px; padding:11px 20px;}
-
-  /* ---------- FAQ ---------- */
-  .faq-list{max-width:760px;}
-  .faq-item{border-bottom:1px solid var(--rule-faint);}
-  .faq-item summary{
-    cursor:pointer; list-style:none; padding:18px 30px 18px 0; position:relative;
-    font-family:'Roboto Slab',serif; font-weight:700; font-size:15px; line-height:1.4;
-  }
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{
-    content:"+"; position:absolute; right:0; top:16px; font-size:20px; color:var(--rust);
-    font-family:'IBM Plex Mono',monospace; font-weight:400;
-  }
-  .faq-item[open] summary::after{content:"–";}
-  .faq-item .faq-a{font-size:13.5px; color:var(--ink-soft); line-height:1.6; padding:0 30px 18px 0; margin:0; max-width:66ch;}
-
-  /* ---------- WhatsApp float ---------- */
-  .wa-float{
-    position:fixed; right:22px; bottom:22px; z-index:100;
-    display:flex; align-items:center; gap:10px;
-    background:#25D366; color:#fff; text-decoration:none;
-    padding:13px 18px; font-family:'Roboto Slab',serif; font-weight:700; font-size:13.5px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.2);
-  }
-  .wa-float:hover{background:#1ebe57;}
-  .wa-float svg{width:20px; height:20px; flex-shrink:0;}
-  @media (max-width:700px){
-    .wa-float span{display:none;}
-    .wa-float{padding:14px; border-radius:50%;}
-  }
 
   /* ---------- Contact / footer ---------- */
   footer{background:var(--ink); color:#E7E3D8; padding:48px 0 30px;}
@@ -198,17 +108,14 @@
   footer h3{color:#fff; font-size:18px; margin-bottom:10px;}
   footer p, footer a{font-size:13px; color:#B9C0C8; line-height:1.7; text-decoration:none;}
   footer a:hover{color:#fff;}
-  .foot-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:20px; color:#fff;}
+  .foot-brand{font-family:'Roboto Slab',serif; font-weight:700; font-size:19px; color:#fff;}
   .foot-brand .accent{color:var(--rust);}
   .copyline{text-align:center; font-size:11.5px; color:#7C8590; margin-top:36px;}
 
   @media (max-width:760px){
-    .nav-links{display:none;}
-    .hero h1{font-size:30px;}
-    .feature-grid{grid-template-columns:1fr;}
-    .feature:nth-child(odd){border-right:none;}
+    .hero h1{font-size:29px;}
+    .product-grid{grid-template-columns:1fr;}
     .principles{grid-template-columns:1fr;}
-    .video-grid{grid-template-columns:1fr;}
     footer .foot-inner{flex-direction:column;}
   }
 </style>
@@ -217,236 +124,99 @@
 
   <header class="nav">
     <div class="nav-inner">
-      <div class="nav-brand">Civil <span class="accent">RA</span></div>
+      <div class="nav-brand">Er. Shripad <span class="accent">Khaparde</span></div>
       <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#pamphlet">Pamphlet</a>
-        <a href="#tutorials">Tutorials</a>
-        <a href="#faq">FAQ</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#apps">Apps</a>
+        <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="#pricing">Get Civil RA</a>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="wrap">
-      <div class="badge">Career-transforming software for civil engineers</div>
-      <h1>Rate Analysis you already know, built into <span class="accent">one file.</span></h1>
-      <p class="lead">A rate is more than a formula. It is the result of work methodology, years of practical experience, and actual consumption of labour, materials, and plant.</p>
-      <p class="lead">Civil RA brings these elements together with industry- and project-specific accuracy — every rate developed using practical construction knowledge, compared against your own project trends and history.</p>
-      <div class="byline">by Er. Shripad Khaparde &nbsp;·&nbsp; B.E. (Civil), MBA, IIT Kharagpur</div>
-      <div class="byline-creds">32+ years in Estimation, Tendering, Planning &amp; Budgeting — India &amp; Oman</div>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#pricing">Get Civil RA</a>
-        <a class="btn btn-ghost" href="#tutorials">Watch Tutorials</a>
+      <div class="kicker">CIVIL ENGINEERING SOFTWARE &amp; CONSULTING</div>
+      <h1>Software built from 32 years on real projects, not a syllabus.</h1>
+      <p class="lead">I'm Shripad Khaparde — B.E. (Civil), MBA — 32+ years in Estimation, Tendering, Planning &amp; Budgeting across India and Oman. Everything here started as a tool I built for my own work, then refined for other engineers facing the same problems.</p>
+      <div class="cred-row">
+        <div class="cred"><b>32+ Years</b>Estimation, Tendering, Planning &amp; Budgeting</div>
+        <div class="cred"><b>India &amp; Oman</b>Site and head-office experience</div>
+        <div class="cred"><b>B.E. (Civil), MBA</b>Executive Programme: Urban Utilities, Sanitation &amp; Drainage — IIT Kharagpur</div>
+      </div>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/shripad-khaparde115268/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a>
+        <a href="tel:+919960367890">+91 99603 67890</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= STATEMENT ================= -->
-  <section class="statement">
-    <div class="wrap">
-      <div class="section-tag">WHY CIVIL RA</div>
-      <h2 style="font-size:26px; margin-bottom:20px;">Don't build rates from a blank sheet.</h2>
-      <p>Build them from experience, data, and proven project performance.</p>
-      <p class="strong">Civil RA — Smarter Rate Analysis. Better Cost Decisions.</p>
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="shripad-photo.png" alt="Er. Shripad Khaparde">
+      </div>
+      <div class="about-text">
+        <div class="section-tag">ABOUT</div>
+        <h2 style="font-size:26px; margin-bottom:16px;">Shripad Khaparde</h2>
+        <p>I'm a construction management professional with 30+ years of experience across India and Oman, currently functioning at General Manager level, independently handling project management for a construction company. My work spans estimation, tendering, rate analysis, project planning, budgeting, commercial and contract management, project controls, and profitability monitoring.</p>
+        <p>Over three decades, I've moved from hands-on site execution and client billing, into estimation and tendering, project planning, and commercial and contract management — work that has included infrastructure projects exceeding USD 400 million and 400+ km of road networks in Oman, and delivery of large-scale developments like Reliance Corporate Park Phase-1 in India.</p>
+        <p>Alongside project work, I build practical tools — Power BI dashboards, estimation systems, and construction MIS — because the reporting systems available rarely matched how estimation and project control actually get done on site. Civil RA, CLCMS, and the tools on this site come from that same instinct: build what the work actually needs.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ================= SPECIMEN ================= -->
-  <section class="alt">
+  <!-- ================= APPS ================= -->
+  <section id="apps">
     <div class="wrap">
-      <div class="section-tag">SEE IT WORK</div>
+      <div class="section-tag">WHAT I'VE BUILT</div>
       <div class="section-head">
-        <h2>One item, as the tool computes it</h2>
-        <p>Item 2.56 — RCC M20, footing.</p>
+        <h2>Tools for how construction work actually runs</h2>
+        <p>Each one is built around a real problem I faced on site or at the estimation desk — not a generic template.</p>
       </div>
-      <div class="specimen">
-        <div class="label">Specimen — one item, as the tool computes it</div>
-        <div class="ledger-row"><span class="k">Tender BOQ Rate</span><span class="fill"></span><span class="v">₹ 9,559.72 / cum</span></div>
-        <div class="ledger-row"><span class="k">Rate Analysis (RA) Rate</span><span class="fill"></span><span class="v">₹ 7,391.24 / cum</span></div>
-        <div class="ledger-row"><span class="k">Labour</span><span class="fill"></span><span class="v">₹ 1,300.00</span></div>
-        <div class="ledger-row"><span class="k">Material</span><span class="fill"></span><span class="v">₹ 5,860.00</span></div>
-        <div class="ledger-row"><span class="k">Plant (Machinery + Fuel)</span><span class="fill"></span><span class="v">₹ 231.24</span></div>
-        <div class="ledger-row total"><span class="k">L + M + P</span><span class="fill"></span><span class="v">₹ 7,391.24</span></div>
-      </div>
-    </div>
-  </section>
+      <div class="product-grid">
 
-  <!-- ================= FEATURES ================= -->
-  <section id="features">
-    <div class="wrap">
-      <div class="section-tag">WHAT IT DOES</div>
-      <div class="section-head">
-        <h2>Nine things, in the order a BOQ actually moves</h2>
-        <p>From upload to submitted quote — the way you already work, just faster.</p>
-      </div>
-      <div class="feature-grid">
-        <div class="feature"><div class="num">01</div><div><h3>Import BOQ</h3><p>Upload any project's Excel BOQ. Header row is found automatically, whatever format it was typed in.</p></div></div>
-        <div class="feature"><div class="num">02</div><div><h3>Import resource rates</h3><p>Bring in material, labour, machinery and fuel rates from Excel, or enter once and reuse everywhere.</p></div></div>
-        <div class="feature"><div class="num">03</div><div><h3>Import productivity</h3><p>Enter site-proven output — 50 cum excavation/day by JCB — the tool converts it to resource quantity.</p></div></div>
-        <div class="feature"><div class="num">04</div><div><h3>Match similar items</h3><p>Every new BOQ is checked against your own past projects. Repeat items surface with a ready RA to copy.</p></div></div>
-        <div class="feature"><div class="num">05</div><div><h3>LMP breakdown</h3><p>Labour, Material and Plant shown separately for every item, and rolled up for the whole project.</p></div></div>
-        <div class="feature"><div class="num">06</div><div><h3>Export &amp; re-import RA</h3><p>Download the full rate analysis with live Excel formulas, correct offline, re-import updated items.</p></div></div>
-        <div class="feature"><div class="num">07</div><div><h3>Backup, merge &amp; approval</h3><p>Several engineers can work the same BOQ in parallel and merge their backups back together.</p></div></div>
-        <div class="feature"><div class="num">08</div><div><h3>Overhead, profit &amp; budget</h3><p>Add your overhead % and profit % to get the quoted rate — item-wise and rolled up for tender.</p></div></div>
-        <div class="feature"><div class="num">09</div><div><h3>Compare across projects</h3><p>Check your quoted rate against SSR or an earlier project's rate — before you submit, not after.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PAMPHLET ================= -->
-  <section class="alt" id="pamphlet">
-    <div class="wrap">
-      <div class="section-tag">SPEC SHEET</div>
-      <div class="section-head">
-        <h2>Read the full pamphlet</h2>
-        <p>Everything above, plus the complete feature list and specimen rate breakdown, in one printable sheet you can save or share.</p>
-      </div>
-      <div class="pamphlet-card">
-        <div class="picon">PDF</div>
-        <div>
-          <h3>Civil RA — Spec Sheet</h3>
-          <p>For estimators and site engineers. Covers what it does, how it's built, and pricing — one page, ready to print or forward.</p>
-          <a class="btn btn-primary" href="Civil_RA_Pamphlet.pdf" target="_blank" rel="noopener">Download Pamphlet (PDF)</a>
+        <div class="product-card">
+          <span class="ptag">AVAILABLE NOW</span>
+          <h3>Civil RA</h3>
+          <p>BOQ rate analysis software. Import a BOQ, build Labour-Material-Plant rate analysis per item, reuse rates across projects, and generate a tender-ready quoted rate — all in one file, on your own computer.</p>
+          <a class="plink" href="/civilra/">Visit Civil RA →</a>
         </div>
+
+        <div class="product-card coming">
+          <span class="ptag">IN DEVELOPMENT</span>
+          <h3>CLCMS</h3>
+          <p>Closed Loop Construction Management System — built to bring the same site-tested discipline to full project and construction management that Civil RA brings to rate analysis. Still in development — details coming once it's ready.</p>
+          <a class="plink" href="#contact">Get notified →</a>
+        </div>
+
+        <div class="product-card coming">
+          <span class="ptag">PLANNED</span>
+          <h3>Project Management Suite</h3>
+          <p>Additional site and project management tools, built the same way as Civil RA — from real project experience first, software second.</p>
+          <a class="plink" href="#contact">Get notified →</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= PRINCIPLES ================= -->
-  <section class="alt">
+  <!-- ================= APPROACH ================= -->
+  <section class="alt" id="approach">
     <div class="wrap">
-      <div class="section-tag">WHY IT'S BUILT THIS WAY</div>
+      <div class="section-tag">HOW I BUILD</div>
       <div class="section-head">
-        <h2>Built around how you already work</h2>
+        <h2>The same principles, across every tool</h2>
       </div>
       <div class="principles">
-        <div class="p"><h3>Your data stays yours</h3><p>No cloud, no server, no subscription reading your rates. The file runs on your computer; back it up as one file whenever you choose.</p></div>
-        <div class="p"><h3>Your judgment stays yours</h3><p>Every suggested match, every carried-forward rate, is a starting point — not an answer. You finalise every figure yourself.</p></div>
-        <div class="p"><h3>Built for how RA is actually done</h3><p>By consumption per unit or by productivity — whichever way you were taught, the tool works in your terms.</p></div>
-        <div class="p"><h3>Works for a team of one, or a few</h3><p>Export a backup, hand it to a colleague on another site, merge it back in without losing either person's work.</p></div>
+        <div class="p"><h3>Built from real project work</h3><p>Every tool starts as something I needed myself on an actual project, in India or Oman — not a feature list written in the abstract.</p></div>
+        <div class="p"><h3>Your data stays yours</h3><p>No cloud, no server, no subscription reading your project data. The tools run on your own computer.</p></div>
+        <div class="p"><h3>Your judgment stays yours</h3><p>Every suggestion or carried-forward figure is a starting point — you review and finalise every number yourself.</p></div>
+        <div class="p"><h3>Support that's actually reachable</h3><p>Questions or issues go straight to me — not a ticket queue. Reach out anytime by phone or email below.</p></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= TUTORIALS ================= -->
-  <section id="tutorials">
-    <div class="wrap">
-      <div class="section-tag">LEARN</div>
-      <div class="section-head">
-        <h2>Tutorial videos</h2>
-        <p>Short walkthroughs of Civil RA, and the rate analysis method behind it.</p>
-      </div>
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Civil RA — Introduction" allowfullscreen></iframe>
-          </div>
-          <div class="vcap">
-            <h3>Civil RA — Introduction</h3>
-            <p>A one-minute overview of what the tool does and why it's built this way.</p>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Civil RA — Full Walkthrough" allowfullscreen></iframe>
-          </div>
-          <div class="vcap">
-            <h3>Civil RA — Full Walkthrough</h3>
-            <p>A detailed, item-by-item walkthrough from BOQ upload to a submitted tender rate.</p>
-          </div>
-        </div>
-      </div>
-      <p class="video-note">Replace VIDEO_ID_1 / VIDEO_ID_2 above with your actual YouTube video IDs once uploaded (the part after "v=" in the YouTube URL). Add more video-card blocks the same way as you publish more lessons.</p>
-    </div>
-  </section>
-
-  <!-- ================= FAQ ================= -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-tag">QUESTIONS FROM ENGINEERS</div>
-      <div class="section-head">
-        <h2>Frequently asked questions</h2>
-        <p>Real questions from engineers evaluating Civil RA for infrastructure, railway, highway and EPC work.</p>
-      </div>
-      <div class="faq-list">
-
-        <details class="faq-item">
-          <summary>Does it support the way I prepare a professional tender rate analysis — especially for infrastructure, railway, highway or EPC works?</summary>
-          <p class="faq-a">Yes. Earthwork, RCC, roads, railways, tunnels, jetties, barrages and distribution network items all follow the same Material + Labour + Machinery + Diesel + Productivity + Lead + Overhead + Profit structure as any other BOQ item — it's built around how tender-grade RA is actually prepared on infrastructure projects.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can one project have multiple BOQ revisions?</summary>
-          <p class="faq-a">Yes. A revised BOQ can be brought into the same project without losing the rate analysis work already done on it.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Machinery — owned or hired? Which basis does the tool work on?</summary>
-          <p class="faq-a">Both. You can cost machinery either way, depending on how you're actually sourcing it on your project.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can wastage be defined resource-wise, rather than only item-wise?</summary>
-          <p class="faq-a">Yes — wastage is built into the consumption and productivity figures you enter per resource (for example, a 1.05 consumption factor, or a 0.95 productivity factor), so it's already resource-specific rather than a single item-level percentage.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Royalty and statutory charges — can these be separate cost components rather than embedded in the material rate?</summary>
-          <p class="faq-a">Yes. These can be handled as a separate component within the rate analysis, as their own BOQ item, or as part of the preliminary (prelim) cost calculation — whichever matches how your project treats them.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Composite RA — can one rate analysis use another RA as a component?</summary>
-          <p class="faq-a">Yes. You can build a "mini RA" purely to calculate a resource's own rate, then use that resource rate inside other analyses — so a rate can be composed from other rates.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Machinery — can it calculate fuel, operator, depreciation, maintenance and hiring cost?</summary>
-          <p class="faq-a">Fuel is linked directly to machine consumption within the RA. Operator cost can be included either within the machine's hire/rent rate, or entered as a separate individual labour cost — whichever matches how you actually contract it.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Excel — are formulas and resource relationships preserved during export and re-import?</summary>
-          <p class="faq-a">Yes. Exported files keep live Excel formulas and resource relationships intact. On re-import, only the items you've actually changed are updated — nothing else is touched.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can current rates be compared with previous projects or SSR?</summary>
-          <p class="faq-a">Yes. You can check a rate against your own past projects or against SSR (Schedule of Rates) before finalising your quote.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can you demonstrate an actual infrastructure item — earthwork, RCC, road, railway, tunnel, jetty, barrage or distribution network — with Material + Labour + Machinery + Diesel + Productivity + Lead + OH + Profit?</summary>
-          <p class="faq-a">Yes — a sample project backup with worked examples across these categories is included with every license, so you can see the full breakdown on real infrastructure items from day one.</p>
-        </details>
-
-      </div>
-      <p class="pricing-note" style="margin-top:26px;">Still have a question specific to your project? <a href="https://wa.me/919960367890" target="_blank" rel="noopener" style="color:var(--rust); font-weight:600;">Message on WhatsApp</a> or use the contact details below.</p>
-    </div>
-  </section>
-
-  <!-- ================= PRICING ================= -->
-  <section class="alt" id="pricing">
-    <div class="wrap">
-      <div class="section-tag">GET CIVIL RA</div>
-      <div class="section-head">
-        <h2>One-time license, yours to keep</h2>
-      </div>
-      <div class="pricing-box">
-        <div class="price">₹5,000/- <span style="font-weight:400; font-size:20px;">· $55</span>
-          <small>one-time · per license · sample backup included, merge as your first project</small>
-        </div>
-        <div class="buy-row">
-          <a class="buy-btn" href="https://imjo.in/PkbyqT" target="_blank" rel="noopener">Pay INR 5000/-<small>India — Instamojo</small></a>
-          <a class="buy-btn intl" href="https://www.paypal.com/ncp/payment/6C3YTW94DWKV6" target="_blank" rel="noopener">Pay 55 $<small>International — PayPal</small></a>
-        </div>
-      </div>
-      <p class="pricing-note">Questions before buying, or need a hand getting started afterward? Support calls and emails are welcome — reach out anytime using the contact details below. Civil RA is licensed per user, so please get your own copy rather than reusing a colleague's file.</p>
     </div>
   </section>
 
@@ -455,25 +225,19 @@
     <div class="wrap">
       <div class="foot-inner">
         <div>
-          <div class="foot-brand">Civil <span class="accent">RA</span></div>
-          <p style="margin-top:8px; max-width:36ch;">Rate analysis software for civil engineers, estimators and site engineers.</p>
+          <div class="foot-brand">Shripad <span class="accent">Khaparde</span></div>
+          <p style="margin-top:8px; max-width:36ch;">B.E. (Civil), MBA, IIT Kharagpur<br>32+ Years — Estimation, Tendering, Planning &amp; Budgeting — India &amp; Oman</p>
         </div>
         <div>
-          <h3>Er. Shripad Khaparde</h3>
-          <p>B.E. (Civil), MBA, IIT Kharagpur<br>32+ Years — India &amp; Oman</p>
+          <h3>Get in touch</h3>
           <p><a href="https://www.linkedin.com/in/shripad-khaparde115268/" target="_blank" rel="noopener">linkedin.com/in/shripad-khaparde115268</a></p>
           <p>+91 99603 67890 &nbsp;·&nbsp; <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a></p>
-          <p><a href="https://wa.me/919960367890" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></p>
+          <p style="margin-top:10px;">Interested in CLCMS or future tools? Email or call to be notified at launch.</p>
         </div>
       </div>
-      <div class="copyline">© <span id="year"></span> Civil RA. All rights reserved.</div>
+      <div class="copyline">© <span id="year"></span> Shripad Khaparde. All rights reserved.</div>
     </div>
   </footer>
-
-  <a class="wa-float" href="https://wa.me/919960367890?text=Hi%2C%20I%20have%20a%20question%20about%20Civil%20RA" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.09c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.98s.74-2.11 1-2.4c.26-.29.58-.36.77-.36.19 0 .39 0 .55.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.65.78 1.93.92.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
-    <span>Chat on WhatsApp</span>
-  </a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
