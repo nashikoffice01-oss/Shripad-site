@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>You're Registered! | Civil RA Live Workshop</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0f2a44;--orange:#f28c28;--green:#25d366;--green-d:#1ebe5b;--ink:#1d2733;--muted:#5b6775;--line:#e3e8ee;--bg:#f6f8fb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:40px 16px}
+  .box{max-width:620px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px 28px;
+       text-align:center;box-shadow:0 10px 30px rgba(15,42,68,.08)}
+  .tick{width:72px;height:72px;border-radius:50%;background:#e8f8ee;color:#1f9d55;font-size:38px;line-height:72px;margin:0 auto 16px}
+  h1{color:var(--navy);font-size:clamp(24px,4.5vw,32px);margin-bottom:6px}
+  .sub{color:var(--muted);margin-bottom:24px}
+  .when{background:var(--bg);border-radius:12px;padding:14px;margin-bottom:24px;font-size:15px}
+  .when b{color:var(--navy)}
+  .step{font-size:13px;font-weight:600;color:var(--orange);letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px}
+  .wa{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;text-decoration:none;font-weight:600;
+      font-size:18px;padding:16px 30px;border-radius:12px;transition:.2s}
+  .wa:hover{background:var(--green-d);transform:translateY(-1px)}
+  .wa svg{width:24px;height:24px;fill:#fff}
+  .note{font-size:13px;color:var(--muted);margin-top:10px}
+  ul{list-style:none;text-align:left;margin:28px 0 8px;border-top:1px solid var(--line);padding-top:20px}
+  li{padding:8px 0;font-size:15px}
+  li::before{content:"✔";color:#1f9d55;font-weight:700;margin-right:10px}
+  .contact{margin-top:20px;font-size:14px;color:var(--muted)}
+  .contact a{color:var(--navy);font-weight:600}
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="tick">✓</div>
+    <h1>Payment successful — you're in!</h1>
+    <p class="sub">Thank you for registering for the Civil RA Live Rate Analysis Workshop.</p>
+
+    <div class="when">
+      📅 <b>Sunday, 25 October 2026</b><br>
+      ⏱️ <b>12:00 – 1:00 PM IST</b> • Live Online
+      <div id="localtime" style="font-size:13px;color:var(--muted);margin-top:4px"></div>
+    </div>
+
+    <div class="step">Important — next step</div>
+    <a class="wa" href="https://chat.whatsapp.com/JrPKuh0FLdvICD3Rt2enRG" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+      Join the WhatsApp Group
+    </a>
+    <p class="note">The live session link, reminders and your free Student Edition will be shared in this group.</p>
+
+    <ul>
+      <li>Join this and <b>any future Civil RA webinar</b> at no extra fee</li>
+      <li>Ask your questions anytime on WhatsApp or email</li>
+      <li>Civil RA Student Edition — free</li>
+      <li>A confirmation email is on its way (check spam/promotions too)</li>
+    </ul>
+
+    <p class="contact">Need help? WhatsApp <a href="https://wa.me/919960367890">+91 99603 67890</a> or email <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a></p>
+  </div>
+
+<script>
+  try{
+    const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if(tz!=='Asia/Calcutta' && tz!=='Asia/Kolkata'){
+      const s=new Date('2026-10-25T06:30:00Z'), e=new Date('2026-10-25T07:30:00Z');
+      document.getElementById('localtime').textContent='Your time: '+
+        s.toLocaleString([],{weekday:'short',day:'numeric',month:'short',hour:'numeric',minute:'2-digit'})+' – '+
+        e.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})+' ('+tz+')';
+    }
+  }catch(err){}
+</script>
+</body>
+</html>
