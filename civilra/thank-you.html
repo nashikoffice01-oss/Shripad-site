@@ -4,93 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Payment Received — Civil RA</title>
+<meta name="description" content="Payment received for Civil RA. Next step: send us your Device ID to get your activation key.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#EDE8DB;
-    --paper-2:#F5F1E6;
-    --ink:#1B2430;
-    --ink-soft:#4B5561;
-    --blueprint:#2C5B7C;
-    --rust:#B1502B;
-    --rule:#B7AE9C;
-    --rule-faint:#D9D2C0;
-    --white:#FFFFFF;
-    --green:#1E8A4C;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
-  }
-  .card{
-    max-width:560px; width:100%;
-    background:var(--white); border:1px solid var(--rule);
-    padding:44px 40px;
-    text-align:center;
-  }
-  .check{
-    width:64px; height:64px; border-radius:50%; background:var(--green);
-    color:#fff; display:flex; align-items:center; justify-content:center;
-    font-size:32px; margin:0 auto 22px;
-  }
-  h1{font-family:'Roboto Slab',serif; font-weight:700; font-size:26px; margin:0 0 12px;}
-  p{font-size:14.5px; color:var(--ink-soft); margin:0 0 16px; line-height:1.65;}
-  .brand{font-family:'Roboto Slab',serif; font-weight:700; color:var(--rust);}
-  .steps{
-    text-align:left; border-top:1px solid var(--rule-faint); border-bottom:1px solid var(--rule-faint);
-    padding:20px 0; margin:26px 0;
-  }
-  .step{display:flex; gap:12px; align-items:flex-start; margin-bottom:14px;}
-  .step:last-child{margin-bottom:0;}
-  .step .n{
-    font-family:'Roboto Slab',serif; font-weight:700; color:var(--rust);
-    width:22px; flex-shrink:0;
-  }
-  .step p{margin:0; font-size:13.5px;}
-  .actions{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:8px;}
-  .btn{
-    display:inline-block; text-decoration:none; font-family:'Roboto Slab',serif;
-    font-weight:700; font-size:13.5px; padding:12px 20px;
-  }
-  .btn-primary{background:#25D366; color:#fff;}
-  .btn-ghost{background:transparent; color:var(--ink); border:1.5px solid var(--ink);}
-  .btn:hover{opacity:0.9;}
-  .note{font-size:12px; color:var(--ink-soft); margin-top:24px;}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
 </head>
-<body>
-
-  <div class="card">
-    <div class="check">✓</div>
-    <h1>Payment Received</h1>
-    <p>Thank you for purchasing <span class="brand">Civil RA</span>. Your payment has been received successfully.</p>
-
-    <div class="steps">
-      <div class="step"><div class="n">1</div><p>You'll receive the software file and your license details by <b>email</b> (and/or WhatsApp) within <b>24 hours</b>.</p></div>
-      <div class="step"><div class="n">2</div><p>A sample project backup is included — you can start exploring the tool immediately once it arrives.</p></div>
-      <div class="step"><div class="n">3</div><p>Need help getting started? Support is included — just reach out.</p></div>
-    </div>
-
-    <p>Didn't receive anything within 24 hours, or have a question? Message us directly — this is treated as priority.</p>
-
-    <div class="actions">
-      <a class="btn btn-primary" href="https://wa.me/919960367890?text=Hi%2C%20I%20just%20paid%20for%20Civil%20RA%20and%20wanted%20to%20confirm%20delivery." target="_blank" rel="noopener">Message on WhatsApp</a>
-      <a class="btn btn-ghost" href="/civilra/">Back to Civil RA</a>
-    </div>
-
-    <p class="note">Er. Shripad Khaparde · nashikoffice01@gmail.com · +91 99603 67890</p>
+<body style="background:var(--bg)">
+<main class="page">
+<div class="wrap narrow" style="padding-top:44px;padding-bottom:30px">
+  <div class="card" style="text-align:center;padding:36px 28px">
+    <div class="tick-circle">✓</div>
+    <h2 style="margin:0 0 8px">Payment received</h2>
+    <p style="flex:none">Thank you for purchasing <b style="color:var(--orange-d)">Civil RA</b>. Your payment has been received successfully. One quick step to activate your licence:</p>
   </div>
 
+  <div style="margin-top:16px">
+    <div class="stepline"><div class="n">1</div><div><p><b>Get your Device ID.</b> Open Civil RA, click <b>Licence &amp; terms</b>, and copy the <b>Device ID</b> (it looks like DEV-XXXX-XXXX-XXXX).</p>
+      <span class="muted">Don't have the program yet? <a href="/civilra/get-civil-ra.html">Download it here</a> and open it in Chrome or Edge.</span></div></div>
+    <div class="stepline"><div class="n">2</div><div><p><b>Send it to us</b> with the name for the licence, by WhatsApp or email.</p></div></div>
+    <div class="stepline"><div class="n">3</div><div><p><b>Paste the key we send you</b> into Licence &amp; terms. Done. A sample project backup is included, so you can start straight away.</p>
+      <span class="muted">You enter the key once. No password and no internet are needed afterwards.</span></div></div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px">
+    <a class="btn btn-green" href="https://wa.me/919960367890?text=Hi%2C%20I%20just%20paid%20for%20Civil%20RA.%20My%20Device%20ID%20is%3A%20" target="_blank" rel="noopener">Send Device ID on WhatsApp</a>
+    <a class="btn btn-outline" href="mailto:nashikoffice01@gmail.com?subject=Civil%20RA%20Device%20ID&amp;body=Licence%20name%3A%0ADevice%20ID%3A%0A">Send by email</a>
+    <a class="btn btn-outline" href="/civilra/">Back to Civil RA</a>
+  </div>
+  <p class="fine" style="text-align:center;margin:22px auto 0">Questions, or no reply from us? Message directly, this is treated as priority.<br>Er. Shripad Khaparde · nashikoffice01@gmail.com · +91 99603 67890</p>
+</div>
+</main>
 </body>
 </html>
