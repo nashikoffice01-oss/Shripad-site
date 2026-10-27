@@ -61,7 +61,7 @@
   // 2) OPTIONAL but recommended: paste the EMBED link here so the form shows on this page and the
   //    download unlocks by itself after submit. In Google Forms: Send > the <> tab > copy the src="..." address.
   //    It looks like: https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true
-  var FORM_EMBED = '';
+  var FORM_EMBED = 'https://docs.google.com/forms/d/e/1FAIpQLSexa-QBa53JmFxKyc3RSqEZpA0v3YFga-xRPtcqdXZgjG1uDw/viewform?embedded=true';
   // =====================
   function done(){
     try{ localStorage.setItem('civilra-registered','1'); }catch(e){}
@@ -74,7 +74,7 @@
   var box=document.getElementById('formbox');
   if(FORM_EMBED){
     var loads=0, f=document.createElement('iframe');
-    f.src=FORM_EMBED; f.style.cssText='width:100%;height:640px;border:0;background:#fff;border-radius:8px';
+    f.src=FORM_EMBED; f.style.cssText='width:100%;height:760px;border:0;background:#fff;border-radius:8px';
     f.title='Registration form';
     f.onload=function(){ loads++; if(loads>=2) done(); };
     box.appendChild(f);
