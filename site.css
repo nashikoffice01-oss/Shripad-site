@@ -14,12 +14,12 @@ a{color:inherit}
 /* ---------- Nav ---------- */
 header.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(15,42,68,.05)}
 .nav-inner{max-width:1080px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-weight:700;font-size:26px;color:var(--navy);text-decoration:none;letter-spacing:-.3px;line-height:1.2}
+.brand{font-weight:700;font-size:26px;color:var(--navy);text-decoration:none;letter-spacing:-.3px;line-height:1.2;white-space:nowrap}
 .brand span{color:var(--orange-d)}
 .brand small{display:block;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:0}
-.brand.person{font-size:22px}
-.nav-links{display:flex;gap:24px;font-size:16px;font-weight:600;color:var(--navy)}
-.nav-links a{text-decoration:none}
+.brand.person{font-size:22px;white-space:normal}
+.nav-links{display:flex;gap:22px;font-size:16px;font-weight:600;color:var(--navy)}
+.nav-links a{text-decoration:none;white-space:nowrap}
 .nav-links a:hover{color:var(--orange-d)}
 .back{font-weight:600;color:var(--navy);text-decoration:none;font-size:15.5px}
 .back:hover{color:var(--orange-d)}
