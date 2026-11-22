@@ -66,9 +66,17 @@
     <input id="f-email" name="email" type="email" autocomplete="email" required>
     <div class="err" id="e-email">Please enter a valid email address.</div>
 
+    <label for="f-email2">Confirm email *</label>
+    <input id="f-email2" name="email2" type="email" autocomplete="off" required>
+    <div class="err" id="e-email2">The two email addresses don't match.</div>
+
     <label for="f-phone">WhatsApp number, with country code *</label>
     <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 91 98765 43210" required>
     <div class="err" id="e-phone">Please enter your number with country code (digits only).</div>
+
+    <label for="f-country">Country *</label>
+    <input id="f-country" name="country" type="text" autocomplete="country-name" value="India" required>
+    <div class="err" id="e-country">Please enter your country.</div>
 
     <label for="f-role">You are *</label>
     <select id="f-role" name="role" required>
@@ -83,6 +91,13 @@
       <option>Other</option>
     </select>
     <div class="err" id="e-role">Please choose one.</div>
+
+    <label for="f-company">Company / college (optional)</label>
+    <input id="f-company" name="company" type="text" autocomplete="organization">
+
+    <label style="display:flex;gap:10px;align-items:center;font-weight:500;color:var(--ink);margin-top:16px;cursor:pointer">
+      <input id="f-updates" type="checkbox" style="width:20px;height:20px;margin:0;flex:none"> Send me Civil RA updates
+    </label>
 
     <button class="fd-btn" id="go" type="submit">⬇ Register &amp; Download Free</button>
     <p class="fd-note">By registering you agree that we may contact you about Civil RA. We never share your details.</p>
@@ -103,8 +118,9 @@
 <script>
 (function(){
   // Google Form "Estimator Info": answers are sent straight to it (no sign-in, no cookies).
-  var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdYaN4XEp5130aiGF-ObeihlnQiPzKL6SNp-MQCu5XX9FKFiA/formResponse';
-  var F = { name:'entry.32494145', email:'entry.589421249', phone:'entry.2079266793', role:'entry.1767226552' };
+  var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSexa-QBa53JmFxKyc3RSqEZpA0v3YFga-xRPtcqdXZgjG1uDw/formResponse';
+  var F = { name:'entry.2009702656', phone:'entry.2031169580', email:'entry.1543463472', country:'entry.642287808',
+            role:'entry.1325910548', company:'entry.891483458', updates:'entry.1796391726' };
   var NEXT = '/civilra/get-civil-ra.html';
 
   var form = document.getElementById('regForm'), btn = document.getElementById('go');
@@ -113,17 +129,23 @@
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var name = val('f-name'), email = val('f-email'), phone = val('f-phone').replace(/[^\d]/g,''), role = val('f-role');
+    var name = val('f-name'), email = val('f-email'), phone = val('f-phone').replace(/[^\d]/g,''), role = val('f-role'),
+        country = val('f-country'), company = val('f-company');
     var okName = name.length >= 2,
         okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email),
         okPhone = phone.length >= 10 && phone.length <= 15,
-        okRole = !!role;
-    show('e-name', !okName); show('e-email', !okEmail); show('e-phone', !okPhone); show('e-role', !okRole);
-    if(!(okName && okEmail && okPhone && okRole)) return;
+        okRole = !!role, okCountry = country.length >= 2,
+        okEmail2 = okEmail && val('f-email2').toLowerCase() === email.toLowerCase();
+    show('e-name', !okName); show('e-email', !okEmail); show('e-phone', !okPhone); show('e-role', !okRole); show('e-country', !okCountry); show('e-email2', okEmail && !okEmail2);
+    if(!(okName && okEmail && okEmail2 && okPhone && okRole && okCountry)) return;
 
     btn.disabled = true; btn.textContent = 'Starting your download…';
     var data = new URLSearchParams();
-    data.append(F.name, name); data.append(F.email, email); data.append(F.phone, phone); data.append(F.role, role);
+    data.append(F.name, name); data.append(F.phone, phone); data.append(F.email, email);
+    data.append(F.country, country); data.append(F.role, role);
+    if (company) data.append(F.company, company);
+    data.append(F.updates, document.getElementById('f-updates').checked ? 'Yes' : 'No');
+    data.append('emailAddress', email);   // Google's own email box ("Collect email addresses: Responder input")
 
     var sent = false;
     try { sent = navigator.sendBeacon && navigator.sendBeacon(FORM_URL, data); } catch(err){}
