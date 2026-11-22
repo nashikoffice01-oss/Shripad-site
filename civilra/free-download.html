@@ -4,127 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Civil RA Free — Register and Download</title>
-<meta name="description" content="Register with your name, email and phone, then download the free edition of Civil RA, offline rate analysis software for estimators and civil engineers.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Download Civil RA Free edition: offline rate analysis and BOQ software for estimators and civil engineers. Register in 30 seconds.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/site.css">
+<style>
+  /* Page-specific styles (work with or without site.css) */
+  :root{--navy:#0f2a44;--navy2:#173b5f;--orange:#f28c28;--orange-d:#d9741a;--ink:#1d2733;--muted:#5b6775;--line:#e3e8ee;--bg:#f6f8fb}
+  body{margin:0;font-family:'Poppins',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  .topbar{background:#fff;border-bottom:1px solid var(--line)}
+  .topbar .in{max-width:860px;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+  .topbar .brand{font-weight:700;font-size:22px;color:var(--navy);text-decoration:none}
+  .topbar .brand span{color:var(--orange)}
+  .topbar .back{color:var(--navy);font-weight:600;text-decoration:none;font-size:14px}
+  .fd-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center;padding:40px 16px 48px}
+  .fd-hero .tag{display:inline-block;background:rgba(242,140,40,.18);color:#ffc58f;border:1px solid rgba(242,140,40,.5);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.5px}
+  .fd-hero h1{font-size:clamp(28px,5vw,40px);margin:14px 0 8px;line-height:1.2}
+  .fd-hero p{max-width:560px;margin:0 auto;opacity:.9}
+  .fd-wrap{max-width:560px;margin:-28px auto 40px;padding:0 16px}
+  .fd-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;box-shadow:0 10px 30px rgba(15,42,68,.08)}
+  .fd-card h2{margin:0 0 4px;font-size:21px;color:var(--navy)}
+  .fd-card .small{font-size:13.5px;color:var(--muted);margin:0 0 14px}
+  .fd-card label{display:block;font-weight:600;font-size:14px;color:var(--navy);margin-top:14px}
+  .fd-card input,.fd-card select{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:12px;border:2px solid #cfd8e3;border-radius:10px;font:500 15px 'Poppins',Arial,sans-serif;background:#fff;color:var(--ink)}
+  .fd-card input:focus,.fd-card select:focus{outline:none;border-color:var(--orange)}
+  .fd-card .err{color:#c0392b;font-size:13px;margin-top:4px;display:none}
+  .fd-btn{display:block;width:100%;margin-top:20px;background:var(--orange);color:#fff;border:0;border-radius:10px;padding:15px;font:700 17px 'Poppins',Arial,sans-serif;cursor:pointer}
+  .fd-btn:hover{background:var(--orange-d)}
+  .fd-btn[disabled]{opacity:.6;cursor:wait}
+  .fd-note{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
+  .fd-list{list-style:none;padding:0;margin:20px 0 0;font-size:14px}
+  .fd-list li{padding:4px 0}
+  .fd-list li::before{content:"✔";color:#1f9d55;font-weight:700;margin-right:8px}
+  .fd-foot{text-align:center;font-size:13px;color:var(--muted);padding:10px 16px 30px}
+  .fd-foot a{color:var(--navy)}
+</style>
 </head>
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="/civilra/">Civil <span>RA</span></a>
-    <a class="back" href="/civilra/">← Back to Civil RA</a>
-  </div>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="/civilra/">Civil <span>RA</span></a>
+  <a class="back" href="/civilra/">← Back to Civil RA</a>
+</div></div>
+
+<header class="fd-hero">
+  <span class="tag">CIVIL RA · FREE EDITION</span>
+  <h1>Get Civil RA Free</h1>
+  <p>Tell us who you are in 30 seconds, and the download starts. We use your details to help you get started and to tell you about updates.</p>
 </header>
 
-<header class="hero small center">
-  <div class="wrap">
-    <span class="tag">CIVIL RA · FREE EDITION</span>
-    <h1 style="margin-top:14px">Get Civil RA Free</h1>
-    <p class="lead" style="font-size:18px">Tell us who you are in 30 seconds, and the download starts. We use your details to help you get started and to tell you about updates.</p>
-  </div>
-</header>
+<main class="fd-wrap">
+  <form class="fd-card" id="regForm" novalidate>
+    <h2>Register and download</h2>
+    <p class="small">No sign-in needed. Civil RA runs on a laptop or desktop in Chrome or Edge.</p>
 
-<main class="page">
-<div class="wrap narrow" style="padding-top:30px;padding-bottom:20px">
+    <label for="f-name">Full name *</label>
+    <input id="f-name" name="name" type="text" autocomplete="name" required>
+    <div class="err" id="e-name">Please enter your name.</div>
 
-  <div id="already" class="note" style="display:none;margin:0 0 20px;text-align:center">
-    ✅ You are already registered on this computer.<br>
-    <a class="btn" href="/civilra/get-civil-ra.html" style="margin-top:12px;color:var(--navy)">⬇ Download Civil RA</a>
-  </div>
+    <label for="f-email">Email *</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required>
+    <div class="err" id="e-email">Please enter a valid email address.</div>
 
-  <div id="step1" class="stepline"><div class="n">1</div><div style="flex:1;min-width:0">
-    <p><b>Register</b> with your name, email and phone number.</p>
-    <div id="formbox" style="margin-top:14px"></div>
-  </div></div>
+    <label for="f-phone">WhatsApp number, with country code *</label>
+    <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 91 98765 43210" required>
+    <div class="err" id="e-phone">Please enter your number with country code (digits only).</div>
 
-  <div id="step2" class="stepline" style="opacity:.55"><div class="n">2</div><div>
-    <p><b>Download.</b> The file downloads as soon as you submit the form.</p>
-    <span class="muted" id="s2msg">Waiting for your registration…</span>
-    <div style="margin-top:12px"><a class="btn" id="dlbtn" href="/civilra/get-civil-ra.html" style="display:none">⬇ Download Civil RA</a></div>
-  </div></div>
+    <label for="f-role">You are *</label>
+    <select id="f-role" name="role" required>
+      <option value="">Select…</option>
+      <option>Student</option>
+      <option>Site Engineer</option>
+      <option>Estimator</option>
+      <option>Quantity Surveyor</option>
+      <option>Planning / Billing Engineer</option>
+      <option>Contractor</option>
+      <option>Consultant</option>
+      <option>Other</option>
+    </select>
+    <div class="err" id="e-role">Please choose one.</div>
 
-  <p class="fine">Your details stay with us and are not sold or shared. See our <a href="/civilra/terms.html" style="color:var(--orange-d);font-weight:600">terms</a>. Questions first? <a href="mailto:nashikoffice01@gmail.com?subject=Civil%20RA%20question" style="color:var(--orange-d);font-weight:600">Email us</a>.</p>
-</div>
+    <button class="fd-btn" id="go" type="submit">⬇ Register &amp; Download Free</button>
+    <p class="fd-note">By registering you agree that we may contact you about Civil RA. We never share your details.</p>
+
+    <ul class="fd-list">
+      <li>Free edition: 3 projects, 100 BOQ items each</li>
+      <li>Works offline; your data stays on your computer</li>
+      <li>Free live workshop every Sunday, 12–1 PM IST</li>
+    </ul>
+  </form>
 </main>
-<footer>
-  <a href="/civilra/">Civil RA</a> · <a href="/">Home</a> · <a href="/civilra/support.html">Support</a> · <a href="/civilra/terms.html">Terms</a><br>
-  © <span id="year"></span> Er. Shripad Khaparde. All rights reserved. Licensed, not sold.
-</footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script>
-  // ===== SETTINGS =====
-  // 1) The Google Form link (short link, opens in a new tab):
-  var FORM_URL   = 'https://forms.gle/bf1WkcSgUxWvdkxV6';
-  // 2) OPTIONAL but recommended: paste the EMBED link here so the form shows on this page and the
-  //    download unlocks by itself after submit. In Google Forms: Send > the <> tab > copy the src="..." address.
-  //    It looks like: https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true
-  var FORM_EMBED = 'https://docs.google.com/forms/d/e/1FAIpQLSexa-QBa53JmFxKyc3RSqEZpA0v3YFga-xRPtcqdXZgjG1uDw/viewform?embedded=true';
-  // =====================
-  function done(){
-    try{ localStorage.setItem('civilra-registered','1'); }catch(e){}
-    document.getElementById('step2').style.opacity='1';
-    document.getElementById('s2msg').textContent='Thank you! Your download is starting…';
-    var b=document.getElementById('dlbtn'); b.style.display='inline-block';
-    setTimeout(function(){ location.href='/civilra/get-civil-ra.html'; }, 1200);
-  }
-  try{ if(localStorage.getItem('civilra-registered')==='1') document.getElementById('already').style.display='block'; }catch(e){}
-  var box=document.getElementById('formbox');
-  if(FORM_EMBED){
-    var loads=0, f=document.createElement('iframe');
-    f.src=FORM_EMBED; f.style.cssText='width:100%;height:760px;border:0;background:#fff;border-radius:8px';
-    f.title='Registration form';
-    f.onload=function(){ loads++; if(loads>=2) done(); };
-    box.appendChild(f);
-  } else {
-    box.innerHTML='<a class="btn" id="openform" href="'+FORM_URL+'" target="_blank" rel="noopener">Open the registration form</a>'+
-      '<p class="muted" style="margin-top:12px;font-size:15px">The form opens in a new tab. Submit it, then come back to this page.</p>'+
-      '<div id="confirm" style="display:none;margin-top:12px"><button class="btn btn-navy" id="submitted" type="button">I have submitted the form →</button></div>';
-    document.getElementById('openform').addEventListener('click',function(){ document.getElementById('confirm').style.display='block'; });
-    document.addEventListener('click',function(e){ if(e.target && e.target.id==='submitted') done(); });
-  }
-</script>
-<div class="contact-float"><a class="cf-wa" href="https://wa.me/919960367890?text=Hello%20Er.%20Shripad%2C%20I%20am%20on%20your%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.12c-.25.69-1.45 1.32-2 1.37-.51.05-1 .24-3.37-.7-2.84-1.12-4.65-4.03-4.79-4.22-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.35.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.25.59.84 2.05.91 2.2.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.37-.44.5-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.14.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.12.07.7-.18 1.39z"/></svg><span>Chat on WhatsApp</span></a><a class="cf-mail" href="mailto:nashikoffice01@gmail.com?subject=Enquiry%20from%20website" aria-label="Email us"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><span>Email us</span></a></div>
-<style>
-#mp-bg{position:fixed;inset:0;background:rgba(15,42,68,.6);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
-#mp-box{background:#fff;border-radius:14px;max-width:380px;width:100%;padding:22px;font-family:Poppins,Arial,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.35)}
-#mp-box h3{margin:0 0 4px;font-size:19px;color:#0f2a44}
-#mp-box p{margin:0 0 14px;font-size:14.5px;color:#4a5b6c}
-#mp-box a,#mp-box button{display:block;width:100%;box-sizing:border-box;text-align:center;padding:12px;margin-top:9px;border-radius:9px;font:600 15.5px Poppins,Arial,sans-serif;text-decoration:none;cursor:pointer;border:2px solid #0f2a44;background:#fff;color:#0f2a44}
-#mp-box a.pri{background:#f28c28;border-color:#f28c28}
-#mp-box input{display:block;width:100%;box-sizing:border-box;padding:11px;margin-top:6px;border:2px solid #cfd8e3;border-radius:9px;font:500 15px Poppins,Arial,sans-serif}
-#mp-box label{display:block;margin-top:12px;font-size:13.5px;color:#4a5b6c;font-weight:600}
-#mp-box button.cl{border:0;color:#6b7a89;font-weight:500}
-</style>
-<div id="mp-bg"><div id="mp-box" role="dialog" aria-label="Send email"><h3>Send us an email</h3><p>Choose how you want to write to <b id="mp-a"></b></p>
-<label for="mp-cc">CC a copy to (optional), e.g. your manager</label><input id="mp-cc" type="email" placeholder="manager@company.com" autocomplete="off">
-<a class="pri" id="mp-g" target="_blank" rel="noopener">Open Gmail</a><a id="mp-o" target="_blank" rel="noopener">Open Outlook</a><a id="mp-d">Use my computer's mail app</a><button id="mp-c">Copy email address</button><button class="cl" id="mp-x">Close</button></div></div>
+<div class="fd-foot">
+  Already registered on this computer? <a href="/civilra/get-civil-ra.html">Go to the download</a><br>
+  Help: <a href="mailto:nashikoffice01@gmail.com">nashikoffice01@gmail.com</a> · WhatsApp <a href="https://wa.me/919960367890">+91 99603 67890</a>
+</div>
+
 <script>
 (function(){
-  var bg=document.getElementById('mp-bg'), cur={};
-  function build(){var cc=encodeURIComponent((document.getElementById('mp-cc').value||'').trim()), x=cc?'&cc='+cc:'';
-    document.getElementById('mp-g').href='https://mail.google.com/mail/?view=cm&fs=1&to='+cur.to+'&su='+cur.su+'&body='+cur.bd+x;
-    document.getElementById('mp-o').href='https://outlook.live.com/mail/0/deeplink/compose?to='+cur.to+'&subject='+cur.su+'&body='+cur.bd+x;
-    document.getElementById('mp-d').href='mailto:'+cur.to+'?subject='+cur.su+'&body='+cur.bd+x;}
-  document.getElementById('mp-cc').addEventListener('input',build);
-  if(/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
-  document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href^="mailto:"]'); if(!a) return;
+  // Google Form "Estimator Info": answers are sent straight to it (no sign-in, no cookies).
+  var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdYaN4XEp5130aiGF-ObeihlnQiPzKL6SNp-MQCu5XX9FKFiA/formResponse';
+  var F = { name:'entry.32494145', email:'entry.589421249', phone:'entry.2079266793', role:'entry.1767226552' };
+  var NEXT = '/civilra/get-civil-ra.html';
+
+  var form = document.getElementById('regForm'), btn = document.getElementById('go');
+  function val(id){ return (document.getElementById(id).value || '').trim(); }
+  function show(id, on){ document.getElementById(id).style.display = on ? 'block' : 'none'; }
+
+  form.addEventListener('submit', function(e){
     e.preventDefault();
-    var h=a.getAttribute('href').replace(/&amp;/g,'&'), q=h.indexOf('?'), to=h.slice(7,q<0?undefined:q), p={};
-    if(q>=0) h.slice(q+1).split('&').forEach(function(kv){var i=kv.indexOf('=');p[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1));});
-    cur={to:to,su:encodeURIComponent(p.subject||''),bd:encodeURIComponent(p.body||'')};
-    document.getElementById('mp-a').textContent=to;
-    document.getElementById('mp-c').textContent='Copy email address';
-    build();
-    bg.style.display='flex';
+    var name = val('f-name'), email = val('f-email'), phone = val('f-phone').replace(/[^\d]/g,''), role = val('f-role');
+    var okName = name.length >= 2,
+        okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email),
+        okPhone = phone.length >= 10 && phone.length <= 15,
+        okRole = !!role;
+    show('e-name', !okName); show('e-email', !okEmail); show('e-phone', !okPhone); show('e-role', !okRole);
+    if(!(okName && okEmail && okPhone && okRole)) return;
+
+    btn.disabled = true; btn.textContent = 'Starting your download…';
+    var data = new URLSearchParams();
+    data.append(F.name, name); data.append(F.email, email); data.append(F.phone, phone); data.append(F.role, role);
+
+    var sent = false;
+    try { sent = navigator.sendBeacon && navigator.sendBeacon(FORM_URL, data); } catch(err){}
+    function go(){
+      try { localStorage.setItem('civilra-registered','1'); } catch(err){}
+      location.href = NEXT;
+    }
+    if (sent) { setTimeout(go, 400); return; }
+    // Fallback when sendBeacon is not available
+    fetch(FORM_URL, { method:'POST', mode:'no-cors', body:data }).catch(function(){}).then(function(){ setTimeout(go, 300); });
   });
-  document.getElementById('mp-x').onclick=function(){bg.style.display='none'};
-  bg.addEventListener('click',function(e){if(e.target===bg)bg.style.display='none'});
-  document.getElementById('mp-c').onclick=function(){var b=this,t=document.getElementById('mp-a').textContent;
-    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied: '+t},function(){b.textContent=t+' (copy manually)'});};
 })();
 </script>
 </body>
